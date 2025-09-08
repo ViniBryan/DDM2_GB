@@ -88,8 +88,8 @@ export default StyleSheet.create({
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: width > 400 ? 0 : 10,
-        marginRight: width > 400 ? 10 : 0,
+        marginRight: width > 400 ? 10 : 0, // espaço horizontal em telas grandes
+        marginBottom: width <= 400 ? 10 : 0, // espaço vertical em telas pequenas
         shadowColor: '#ff1744',
         shadowOffset: { width: 0, height: 6 },
         shadowOpacity: 0.6,
@@ -105,6 +105,7 @@ export default StyleSheet.create({
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
+        marginLeft: width > 400 ? 0 : 0, // opcional, não precisa se for coluna
         shadowColor: '#00e676',
         shadowOffset: { width: 0, height: 6 },
         shadowOpacity: 0.6,
@@ -112,6 +113,7 @@ export default StyleSheet.create({
         elevation: 6,
         transform: [{ scale: 1 }],
     },
+
 
     buttonText: {
         color: '#0a0a0a',
